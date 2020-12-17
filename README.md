@@ -1,4 +1,4 @@
 # libft_ext
 
-Contains: 
+Contains source-code for: 
 - basic vector-like types
