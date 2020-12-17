@@ -6,7 +6,7 @@
 /*   By: pspijkst <pspijkst@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/16 13:28:29 by pspijkst      #+#    #+#                 */
-/*   Updated: 2020/12/17 14:30:27 by pspijkst      ########   odam.nl         */
+/*   Updated: 2020/12/17 15:10:21 by pspijkst      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,9 @@ char		vectchar_pushback(t_vector *vector, char value);
 t_vector	*vectptr_init(void);
 void		*vectptr_getvalue(t_vector *vector, int index);
 char		vectptr_pushback(t_vector *vector, void *value);
+
+t_vector	*vectstr_init(void);
+char		*vectstr_getvalue(t_vector *vector, int index);
+char		vectstr_pushback(t_vector *vector, char *str);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: pspijkst <pspijkst@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/16 16:50:38 by pspijkst      #+#    #+#                 */
-/*   Updated: 2020/12/17 15:04:07 by pspijkst      ########   odam.nl         */
+/*   Updated: 2020/12/17 15:32:11 by pspijkst      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,22 @@ static void	test_vectptr(void)
 	vector_free(vectptr);
 }
 
+static void	test_vectstr(void)
+{
+	t_vector	*vectstr;
+
+	vectstr = vectstr_init();
+	vectstr_pushback(vectstr, "Hello world!");
+	vectstr_pushback(vectstr, "Hola mundo!");
+	vectstr_pushback(vectstr, "Hallo wereld!");
+	printf("0: %s\n", vectstr_getvalue(vectstr, 0));
+	printf("1: %s\n", vectstr_getvalue(vectstr, 1));
+	printf("2: %s\n", vectstr_getvalue(vectstr, 2));
+	vector_free(vectstr);
+}
+
 int		main(void)
 {
+	test_vectstr();
 	test_vectptr();
 }
